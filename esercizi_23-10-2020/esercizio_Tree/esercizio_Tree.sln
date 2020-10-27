@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29609.76
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "esercizio_Tree", "esercizio_Tree\esercizio_Tree.vcxproj", "{48BABB2B-C4F3-4C11-8D85-1039F9662498}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Debug|x64.ActiveCfg = Debug|x64
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Debug|x64.Build.0 = Debug|x64
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Debug|x86.ActiveCfg = Debug|Win32
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Debug|x86.Build.0 = Debug|Win32
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Release|x64.ActiveCfg = Release|x64
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Release|x64.Build.0 = Release|x64
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Release|x86.ActiveCfg = Release|Win32
+		{48BABB2B-C4F3-4C11-8D85-1039F9662498}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {027B22AC-304A-4CB6-B96C-A64104A80280}
+	EndGlobalSection
+EndGlobal
