@@ -65,5 +65,25 @@ public:
     {
         return *ptr;
     };
+
+    /**
+     * @brief operator ==
+     * @param p => DeepPtr, oggetto da confrontare
+     * @return true se sono uguali, altrimenti false
+     */
+    bool operator==(const DeepPtr& p)
+    {
+        return p.ptr == ptr;
+    };
+
+    /**
+     * @brief operator !=
+     * @param p => DeepPtr, oggetto da confrontare
+     * @return true se sono diversi, altrimenti false
+     */
+    bool operator!=(const DeepPtr& p)
+    {
+        return p.ptr != ptr;
+    };
 };
 #endif // DEEPPTR_H
