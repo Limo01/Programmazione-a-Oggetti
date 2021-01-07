@@ -19,7 +19,7 @@ void CpuPlayer::findThisTarget(const DLList<DeepPtr<Player>>& players, int& targ
     }
 };
 
-void CpuPlayer::searchHealCard(int& targetCard) const
+void CpuPlayer::searchHealCard(int& targetCard)
 {
     int i=0;
     int max=-1;
@@ -57,7 +57,7 @@ void CpuPlayer::searchPossibleKill(const DLList<DeepPtr<Player>>& players, int& 
     }
 };
 
-void CpuPlayer::searchPossibleAttack(const DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer) const
+void CpuPlayer::searchPossibleAttack(const DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer)
 {
     int i=0;
     bool found= false;
@@ -105,7 +105,6 @@ std::string CpuPlayer::playTurn(DLList<DeepPtr<Player>>& players)
     {
         int targetCard=-1;
         int targetPlayer=-1;
-        Card* c;
 
         if(getHealth()<=10)//prima di tutto guarda se si deve curare
         {
@@ -118,14 +117,16 @@ std::string CpuPlayer::playTurn(DLList<DeepPtr<Player>>& players)
 
         if(targetCard==-1)//altrimenti giocata casuale con l'accortezza di non suicidarsi
         {
+            srand(time(NULL));
+
             targetCard= rand()%getHandSize();
-            c= getHand()[targetCard].get();
+            Card* c= getHand()[targetCard].get();
 
             if(typeid(*c)==typeid(SingleAttackCard) || typeid(*c)==typeid(DiscardCardsCard))//se la carta è di tipo attacco singolo o scarta carte
             {
                 targetPlayer= rand()%players.getSize();
 
-                while(!players[targetPlayer]->isInGame() || players[targetPlayer].get()==this)//non deve scegliersi da solo come bersaglio e il target ovviamente deve essere vivo
+                while(players[targetPlayer].get()==this || !players[targetPlayer]->isInGame())//non deve scegliersi da solo come bersaglio e il target ovviamente deve essere vivo
                     targetPlayer= rand()%players.getSize();
             }
             else if(typeid(*c)==typeid(HealCard))//se è una carta cura, il target è sempre se stesso

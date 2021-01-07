@@ -56,7 +56,7 @@ DeepPtr<Card> CardCreator::createRandomCard() const
 
 Deck<DeepPtr<Card>> CardCreator::createRandomDeck(int n) const
 {
-    srand(time(0));
+    srand(time(NULL));
     Deck<DeepPtr<Card>> d(n);
 
     for(int i=0; i<n; i++)

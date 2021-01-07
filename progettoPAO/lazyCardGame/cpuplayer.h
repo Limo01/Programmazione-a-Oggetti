@@ -3,6 +3,7 @@
 
 #include "player.h"
 #include <string>
+#include <ctime>
 
 class CpuPlayer : public Player
 {
@@ -18,7 +19,7 @@ private:
      * @brief searchHealCard => Funzione per cercare la carta salute con valore più alto all'interno della mano
      * @param targetCard => int, variabile passata per referenza che conterrà l'indice della carta all'interno della mano del giocatore (se la trova, altrimenti conterrà il valore iniziale)
      */
-    void searchHealCard(int& targetCard) const;
+    void searchHealCard(int& targetCard);
 
     /**
      * @brief searchPossibleKill => Funzione per vedere se è possibbile uccidere uno tra i giocatori usando un dato valore di attacco
@@ -34,7 +35,7 @@ private:
      * @param targetCard => int, variabile passata per referenza che conterrà l'indice della carta attacco all'interno della mano del giocatore (solo se ha trovato un possibile attacco, altrimenti conterrà il valore iniziale)
      * @param targetPlayer => int, variabile passata per referenza che conterrà l'indice del giocatore selezionato (solo se ha trovato un possibile attacco, altrimenti conterrà il valore iniziale)
      */
-    void searchPossibleAttack(const DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer) const;
+    void searchPossibleAttack(const DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer);
 
 public:
     /**

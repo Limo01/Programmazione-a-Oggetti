@@ -41,7 +41,7 @@ int Player::getHandSize() const
     return hand.getSize();
 };
 
-const DLList<DeepPtr<Card>>& Player::getHand() const
+DLList<DeepPtr<Card>>& Player::getHand()
 {
     return hand;
 };

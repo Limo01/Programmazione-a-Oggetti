@@ -66,7 +66,7 @@ public:
      * @brief getHand
      * @return lista delle carte in mano al giocatore
      */
-    const DLList<DeepPtr<Card>>& getHand() const;
+    DLList<DeepPtr<Card>>& getHand();
 
     /**
      * @brief getDeckSize

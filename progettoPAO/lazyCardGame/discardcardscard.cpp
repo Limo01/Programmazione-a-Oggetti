@@ -12,7 +12,12 @@ DiscardCardsCard* DiscardCardsCard::clone() const
 void DiscardCardsCard::do_effect(DLList<DeepPtr<Player>>& players, int target) const
 {
     for(int i=0; i<getCradsNumber(); i++)
+    {
         players[target]->drawCard();
+
+        if(players[target]->getHandSize()>0)
+            players[target]->getHand().removeBack();
+    }
 };
 
 std::string DiscardCardsCard::getName() const
