@@ -185,7 +185,7 @@ void View::showHandCardsDescription(const DLList<DeepPtr<Card>>& hand)
     dialog->layout()->addWidget(dialogText);
     dialog->layout()->setAlignment(Qt::AlignCenter);
 
-    dialog->show();
+    dialog->exec();
 };
 
 void View::showGameRules()
@@ -209,5 +209,5 @@ void View::showGameRules()
     dialog->layout()->setAlignment(Qt::AlignCenter);
     dialog->setFixedSize(580, 150);
 
-    dialog->show();
+    dialog->exec();
 };
