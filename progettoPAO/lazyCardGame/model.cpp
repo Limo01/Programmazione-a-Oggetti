@@ -174,7 +174,7 @@ void Model::restartGame()
         begin= (begin+1)%4;
     }
 
-    while(players[0]->getTurnsToSkip() > 0)//se durante il turno è stata giocata una carta per far saltare il turno al giocatore
+    while(!isGameFinished() && players[0]->getTurnsToSkip()>0)//se durante il turno è stata giocata una carta per far saltare il turno al giocatore
     {
         players[0]->removeSkipTurn();
         movesLog= players[0]->getName() + " salta il turno \n\n"+movesLog;
