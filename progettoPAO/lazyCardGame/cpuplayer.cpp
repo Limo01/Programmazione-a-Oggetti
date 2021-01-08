@@ -4,7 +4,7 @@
 #include "multipleattackcard.h"
 #include "discardcardscard.h"
 
-void CpuPlayer::findThisTarget(const DLList<DeepPtr<Player>>& players, int& targetPlayer) const
+void CpuPlayer::findThisTarget(DLList<DeepPtr<Player>>& players, int& targetPlayer) const
 {
     int i=0;
     bool found=false;
@@ -42,7 +42,7 @@ void CpuPlayer::searchHealCard(int& targetCard)
     }
 };
 
-void CpuPlayer::searchPossibleKill(const DLList<DeepPtr<Player>>& players, int& targetPlayer, int attackValue) const
+void CpuPlayer::searchPossibleKill(DLList<DeepPtr<Player>>& players, int& targetPlayer, int attackValue) const
 {
     int i=0;
     bool found= false;
@@ -57,7 +57,7 @@ void CpuPlayer::searchPossibleKill(const DLList<DeepPtr<Player>>& players, int& 
     }
 };
 
-void CpuPlayer::searchPossibleAttack(const DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer)
+void CpuPlayer::searchPossibleAttack(DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer)
 {
     int i=0;
     bool found= false;

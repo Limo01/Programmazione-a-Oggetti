@@ -401,7 +401,7 @@ public:
      * @brief begin
      * @return inizio dell'iteratore
      */
-    Iterator begin() const
+    Iterator begin()
     {
         return Iterator(first);
     };
@@ -410,7 +410,7 @@ public:
      * @brief end
      * @return fine dell'iteratore
      */
-    Iterator end() const
+    Iterator end()
     {
         if(!last) return Iterator();
         return Iterator(last+1,true);

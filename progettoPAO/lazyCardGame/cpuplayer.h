@@ -13,7 +13,7 @@ private:
      * @param players => DLList<DeepPtr<Player>>, lista dei giocatori passata per referenza
      * @param targetPlayer => int, variabile passata per referenza che conterrà l'indice del giocatore
      */
-    void findThisTarget(const DLList<DeepPtr<Player>>& players, int& targetPlayer) const;
+    void findThisTarget(DLList<DeepPtr<Player>>& players, int& targetPlayer) const;
 
     /**
      * @brief searchHealCard => Funzione per cercare la carta salute con valore più alto all'interno della mano
@@ -27,7 +27,7 @@ private:
      * @param targetPlayer => int, variabile passata per referenza che conterrà l'indice del giocatore selezionato (se lo trova, altrimenti conterrà il valore iniziale)
      * @param attackValue => int, valore di attacco della carta che vogliamo usare
      */
-    void searchPossibleKill(const DLList<DeepPtr<Player>>& players, int& targetPlayer, int attackValue) const;
+    void searchPossibleKill(DLList<DeepPtr<Player>>& players, int& targetPlayer, int attackValue) const;
 
     /**
      * @brief searchPossibleAttack => Funzione per cercare se è possibbile sferrare un attacco fatale a un giocatore
@@ -35,7 +35,7 @@ private:
      * @param targetCard => int, variabile passata per referenza che conterrà l'indice della carta attacco all'interno della mano del giocatore (solo se ha trovato un possibile attacco, altrimenti conterrà il valore iniziale)
      * @param targetPlayer => int, variabile passata per referenza che conterrà l'indice del giocatore selezionato (solo se ha trovato un possibile attacco, altrimenti conterrà il valore iniziale)
      */
-    void searchPossibleAttack(const DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer);
+    void searchPossibleAttack(DLList<DeepPtr<Player>>& players, int& targetCard, int& targetPlayer);
 
 public:
     /**

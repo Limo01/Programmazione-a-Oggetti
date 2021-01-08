@@ -92,19 +92,19 @@ public:
      * @brief showPlayersInfo => Funzione per aggiornare i valori dei giocatori
      * @param players => DLList<DeepPtr<Player>>, lista dei giocatori passati per referenza
      */
-    void showPlayersInfo(const DLList<DeepPtr<Player>>& players);
+    void showPlayersInfo(DLList<DeepPtr<Player>>& players);
 
     /**
      * @brief showPlayerHand => Funzione per mostrare la mano di carte del giocatore
      * @param hand => DLList<DeepPtr<Card>>, lista delle carte passata per referenza
      */
-    void showPlayerHand(const DLList<DeepPtr<Card>>& hand);
+    void showPlayerHand(DLList<DeepPtr<Card>>& hand);
 
     /**
      * @brief showTargetPlayers => Funzione per mostrare la lista dei giocatori target
      * @param players => DLList<DeepPtr<Player>>, lista dei giocatori passati per referenza
      */
-    void showTargetPlayers(const DLList<DeepPtr<Player>>& players);
+    void showTargetPlayers(DLList<DeepPtr<Player>>& players);
 
     /**
      * @brief showTurn => Funzione per mostrare il turno attuale
@@ -122,7 +122,7 @@ public:
      * @brief showHandCardsDescription => Funzione per mostrare un Dialog con la descrizione della carte nella mano del giocatore
      * @param hand => DLList<DeepPtr<Card>>, lista delle carte passata per referenza
      */
-    void showHandCardsDescription(const DLList<DeepPtr<Card>>& hand);
+    void showHandCardsDescription(DLList<DeepPtr<Card>>& hand);
 
 public slots:
     /**

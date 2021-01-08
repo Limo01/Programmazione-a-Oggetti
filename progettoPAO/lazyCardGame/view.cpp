@@ -124,7 +124,7 @@ int View::getPlayerTarget() const
     return playersList->getButtonClicked();
 };
 
-void View::showPlayersInfo(const DLList<DeepPtr<Player>>& players)
+void View::showPlayersInfo(DLList<DeepPtr<Player>>& players)
 {
     auto it= ++players.begin();
     for(int i=0; i<playersInfo.size(); i++, it++)
@@ -138,7 +138,7 @@ void View::showPlayersInfo(const DLList<DeepPtr<Player>>& players)
     player->setDeckSize(players[0]->getDeckSize());
 };
 
-void View::showPlayerHand(const DLList<DeepPtr<Card>>& hand)
+void View::showPlayerHand(DLList<DeepPtr<Card>>& hand)
 {
     cardsList->removeButtons();
 
@@ -147,7 +147,7 @@ void View::showPlayerHand(const DLList<DeepPtr<Card>>& hand)
         cardsList->addButton(QString::fromStdString((*it)->getName()), i);
 };
 
-void View::showTargetPlayers(const DLList<DeepPtr<Player>>& players)
+void View::showTargetPlayers(DLList<DeepPtr<Player>>& players)
 {
     playersList->removeButtons();
 
@@ -169,7 +169,7 @@ void View::showMovesLog(const std::string& movesLog)
     log->setText(QString::fromStdString(movesLog));
 };
 
-void View::showHandCardsDescription(const DLList<DeepPtr<Card>>& hand)
+void View::showHandCardsDescription(DLList<DeepPtr<Card>>& hand)
 {
     QDialog* dialog = new QDialog(this);
     QLabel* dialogText= new QLabel(dialog);

@@ -42,7 +42,7 @@ public:
      * @brief getPlayersInfo
      * @return lista dei giocatori
      */
-    const DLList<DeepPtr<Player>>& getPlayersInfo() const;
+    DLList<DeepPtr<Player>>& getPlayersInfo();
 
     /**
      * @brief getTurnNumber

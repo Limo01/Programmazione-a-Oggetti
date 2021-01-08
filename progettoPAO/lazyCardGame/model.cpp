@@ -7,7 +7,7 @@ void Model::calculateWinner()
     {
         if(it->get()->isInGame())
         {
-            movesLog="Vittoria di "+it->get()->getName()+"!\n"+movesLog;
+            movesLog="Vittoria di "+(*it)->getName()+"!\n"+movesLog;
             winner= true;
         }
     }
@@ -56,7 +56,7 @@ const std::string& Model::getMovesLog() const
     return movesLog;
 };
 
-const DLList<DeepPtr<Player>>& Model::getPlayersInfo() const
+DLList<DeepPtr<Player>>& Model::getPlayersInfo()
 {
     return players;
 };
