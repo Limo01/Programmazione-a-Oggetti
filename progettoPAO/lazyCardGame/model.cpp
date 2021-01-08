@@ -7,13 +7,21 @@ void Model::calculateWinner()
     {
         if(it->get()->isInGame())
         {
-            movesLog="Vittoria di "+(*it)->getName()+"!\n"+movesLog;
+            if(movesLog.at(0)=='\n')
+                movesLog="Vittoria di "+(*it)->getName()+"!\n"+movesLog;
+            else
+                 movesLog="Vittoria di "+(*it)->getName()+"!\n\n"+movesLog;
             winner= true;
         }
     }
 
     if(!winner)
-        movesLog="Nessun vincitore!\n"+movesLog;
+    {
+        if(movesLog.at(0)=='\n')
+            movesLog="Nessun vincitore!\n"+movesLog;
+        else
+            movesLog="Nessun vincitore!\n\n"+movesLog;
+    }
 };
 
 Model::Model(std::string name): playerName(name), movesLog(""), turn(1), gameFinished(false)
