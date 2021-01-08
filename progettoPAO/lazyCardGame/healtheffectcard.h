@@ -11,9 +11,9 @@ private:
 public:
     /**
      * @brief HealthEffectCard => Costruttore della classe HealthEffectCard
-     * @param int => numero di cuori dell'effetto
+     * @param int => numero di cuori dell'effetto (deve essere > 0)
      */
-    HealthEffectCard(int=0);
+    HealthEffectCard(int);
 
     /**
      * @brief ~HealthEffectCard => Distruttore della classe HealthEffectCard

@@ -1,22 +1,25 @@
 #include "cardcreator.h"
 
-CardCreator::CardCreator()= default;
+CardCreator::CardCreator()
+{
+    srand(time(NULL));
+};
 
 CardCreator::~CardCreator()= default;
 
 DeepPtr<Card> CardCreator::createSingleAttackCard(int v) const
 {
-    return DeepPtr<Card>(new SingleAttackCard(v));
+    return DeepPtr<Card>(new SingleAttackCard(v==0? rand()%8+3 : v));
 };
 
 DeepPtr<Card> CardCreator::createMultipleAttackCard(int v) const
 {
-    return DeepPtr<Card>(new MultipleAttackCard(v));
+    return DeepPtr<Card>(new MultipleAttackCard(v==0? rand()%3+3 : v));
 };
 
 DeepPtr<Card> CardCreator::createHealCard(int v) const
 {
-    return DeepPtr<Card>(new HealCard(v));
+    return DeepPtr<Card>(new HealCard(v==0? rand()%8+3 : v));
 };
 
 DeepPtr<Card> CardCreator::createSkipTurnCard() const
@@ -26,12 +29,12 @@ DeepPtr<Card> CardCreator::createSkipTurnCard() const
 
 DeepPtr<Card> CardCreator::createDrawCardsCard(int v) const
 {
-    return DeepPtr<Card>(new DrawCardsCard(v));
+    return DeepPtr<Card>(new DrawCardsCard(v==0? rand()%4+2 : v));
 };
 
 DeepPtr<Card> CardCreator::createDiscardCardsCard(int v) const
 {
-    return DeepPtr<Card>(new DiscardCardsCard(v));
+    return DeepPtr<Card>(new DiscardCardsCard(v==0? rand()%4+2 : v));
 };
 
 DeepPtr<Card> CardCreator::createRandomCard() const
@@ -56,7 +59,6 @@ DeepPtr<Card> CardCreator::createRandomCard() const
 
 Deck<DeepPtr<Card>> CardCreator::createRandomDeck(int n) const
 {
-    srand(time(NULL));
     Deck<DeepPtr<Card>> d(n);
 
     for(int i=0; i<n; i++)

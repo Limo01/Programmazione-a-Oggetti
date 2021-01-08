@@ -1,6 +1,6 @@
 #include "multipleattackcard.h"
 
-MultipleAttackCard::MultipleAttackCard(int h): HealthEffectCard(h==0? rand()%3+3 : h){};
+MultipleAttackCard::MultipleAttackCard(int h): HealthEffectCard(h){};
 
 MultipleAttackCard::~MultipleAttackCard()= default;
 

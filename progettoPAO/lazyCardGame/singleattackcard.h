@@ -8,9 +8,9 @@ class SingleAttackCard : public HealthEffectCard
 public:
     /**
      * @brief SingleAttackCard => Costruttore della classe SingleAttackCard
-     * @param int => numero di cuori da rimuovere dalla vita di un giocatore
+     * @param int => numero di cuori da rimuovere dalla vita di un giocatore (deve essere > 0)
      */
-    SingleAttackCard(int=0);
+    SingleAttackCard(int);
 
     /**
      * @brief ~SingleAttackCard => Distruttore della classe SingleAttackCard

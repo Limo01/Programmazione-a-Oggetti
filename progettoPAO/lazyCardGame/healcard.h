@@ -10,7 +10,7 @@ public:
      * @brief HealCard => Costruttore della classe HealCard
      * @param => int, numero di cuori da aggiugnere alla vita di un giocatore
      */
-    HealCard(int=0);
+    HealCard(int);
 
     /**
      * @brief ~HealCard => Distruttore della classe HealCard

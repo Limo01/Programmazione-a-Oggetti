@@ -11,9 +11,9 @@ private:
 public:
     /**
      * @brief PlayerHandEffectCard => Costruttore della classe PlayerHandEffectCard
-     * @param int => numero di carte dell'effetto
+     * @param int => numero di carte dell'effetto (deve essere > 0)
      */
-    PlayerCardsEffectCard(int=0);
+    PlayerCardsEffectCard(int);
 
     /**
      * @brief ~PlayerHandEffectCard => Distruttore della classe PlayerHandEffectCard

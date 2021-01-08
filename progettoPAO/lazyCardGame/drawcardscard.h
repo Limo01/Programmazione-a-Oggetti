@@ -8,9 +8,9 @@ class DrawCardsCard : public PlayerCardsEffectCard
 public:
     /**
      * @brief DrawCardsCard => Costruttore della classe DrawCardsCard
-     * @param int => numero di carte da pescare
+     * @param int => numero di carte da pescare (deve essere > 0)
      */
-    DrawCardsCard(int=0);
+    DrawCardsCard(int);
 
     /**
      * @brief ~DrawCardsCard => Distruttore della classe DrawCardsCard

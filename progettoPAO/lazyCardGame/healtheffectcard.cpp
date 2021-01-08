@@ -1,6 +1,10 @@
 #include "healtheffectcard.h"
 
-HealthEffectCard::HealthEffectCard(int h): hearts_number(h==0? rand()%8+3 : h){};
+HealthEffectCard::HealthEffectCard(int h): hearts_number(h)
+{
+    if(h<=0)
+        throw std::domain_error("HealtEffectCard::HealthEffectCard(int): parameter int must be >= 0");
+};
 
 HealthEffectCard::~HealthEffectCard()= default;
 

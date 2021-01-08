@@ -8,9 +8,9 @@ class DiscardCardsCard : public PlayerCardsEffectCard
 public:
     /**
      * @brief DiscardCardsCard => Costruttore della classe DiscardCardsCard
-     * @param int=> numero di carte da scartare dal deck di un giocatore
+     * @param int=> numero di carte da scartare dal deck di un giocatore (deve essere > 0)
      */
-    DiscardCardsCard(int=0);
+    DiscardCardsCard(int);
 
     /**
      * @brief ~DiscardCardsCard => Distruttore della classe DiscardCardsCard
