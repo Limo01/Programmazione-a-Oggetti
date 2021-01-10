@@ -3,10 +3,6 @@
 #include "model.h"
 #include "controller.h"
 #include "view.h"
-#include "QVector"
-
-#include <iostream>
-#include <string>
 
 int main(int argc, char *argv[])
 {

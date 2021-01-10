@@ -4,6 +4,10 @@
 #include "player.h"
 #include <string>
 #include <ctime>
+#include "healcard.h"
+#include "singleattackcard.h"
+#include "multipleattackcard.h"
+#include "discardcardscard.h"
 
 class CpuPlayer : public Player
 {

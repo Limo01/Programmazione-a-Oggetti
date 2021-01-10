@@ -24,7 +24,7 @@ public:
      * @brief clone
      * @return clone dell'oggetto di invocazione
      */
-    virtual Card* clone() const = 0;
+    virtual Card* clone() const override= 0;
 
     /**
      * @brief getHeartsNumber
@@ -37,14 +37,14 @@ public:
      * @param Card => carta da confrontare
      * @return true se le due carte sono uguali, false altrimenti
      */
-    virtual bool operator==(const Card&) const;
+    virtual bool operator==(const Card&) const override;
 
     /**
      * @brief operator !=
      * @param Card => carta da confrontare
      * @return true se le due carte sono diverse, false altrimenti
      */
-    virtual bool operator!=(const Card&) const;
+    virtual bool operator!=(const Card&) const override;
 };
 
 #endif // HEALTHEFFECTCARD_H

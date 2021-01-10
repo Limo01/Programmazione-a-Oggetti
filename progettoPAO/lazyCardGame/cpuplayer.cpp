@@ -1,8 +1,4 @@
 #include "cpuplayer.h"
-#include "healcard.h"
-#include "singleattackcard.h"
-#include "multipleattackcard.h"
-#include "discardcardscard.h"
 
 void CpuPlayer::findThisTarget(DLList<DeepPtr<Player>>& players, int& targetPlayer) const
 {
