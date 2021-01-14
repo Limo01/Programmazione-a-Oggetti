@@ -7,8 +7,8 @@ template <class T>
 class Deck
 {
 private:   
-    int MAX_SIZE;
-    int size;
+    unsigned int MAX_SIZE;
+    unsigned int size;
     T* cards;
 
     /**
@@ -17,14 +17,14 @@ private:
      * @param size => int, dimensione dell'array da copiare
      * @return array di carte copiato
      */
-    static T* deepCopy(T* t, const int size);
+    static T* deepCopy(T* t, const unsigned int size);
 
 public:
     /**
      * @brief Deck => Costruttore della classe Deck
      * @param s => int, massima grandezza del mazzo
      */
-    Deck(int s=52);
+    Deck(unsigned int s=52);
 
     /**
      * @brief Deck => Costruttore di copia della classe Deck
@@ -84,7 +84,7 @@ public:
      * @param i => int, indice della carta da ottenere
      * @return carta
      */
-    T& operator[](int i) const;
+    T& operator[](unsigned int i) const;
 
     //const Iterator: La visita del mazzo visualizza l'ordine con il quale verrano pescate le carte: in particolare begin() ha come riferimento la prossima carta che verrà pescata, quindi la posizione size-1 dell'array
     class Const_iterator
@@ -208,18 +208,18 @@ public:
 };
 
 template <class T>
-T* Deck<T>::deepCopy(T* t, const int size)
+T* Deck<T>::deepCopy(T* t, const unsigned int size)
 {
     T* aux= new T[size];
 
-    for(int i=0; i<size; i++)
+    for(unsigned int i=0; i<size; i++)
         aux[i]= t[i];
 
     return aux;
 };
 
 template <class T>
-Deck<T>::Deck(int s): MAX_SIZE(s), size(0), cards(new T[MAX_SIZE]){};
+Deck<T>::Deck(unsigned int s): MAX_SIZE(s), size(0), cards(new T[MAX_SIZE]){};
 
 template <class T>
 Deck<T>::Deck(const Deck& d): MAX_SIZE(d.MAX_SIZE), size(d.size), cards(deepCopy(d.cards, d.size)){};
@@ -287,10 +287,10 @@ void Deck<T>::shuffle()
 {
     if(size>1)
     {
-        int n1, n2;
+        unsigned int n1, n2;
         T aux;
 
-        for(int i=0; i<size; i++)
+        for(unsigned int i=0; i<size; i++)
         {
             n1= (rand() % size);//primo numero casuale
             n2= (rand() % size);//secondo numero casuale
@@ -316,7 +316,7 @@ Deck<T>& Deck<T>::operator=(const Deck& d)
 };
 
 template <class T>
-T& Deck<T>::operator[](int i) const
+T& Deck<T>::operator[](unsigned int i) const
 {
     if(i<size && i>=0)
         return cards[i];
